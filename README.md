@@ -25,3 +25,10 @@ async function sleepyWork() {
 }
 sleepyWork();
 ```
+
+计算一个数组中某个值出现的次数
+用```Array.prototype.reduce()```方法计算数组内的值进行递增
+```javascript
+const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+countOccurrences([1, 1, 2, 1, 2, 3], 1); // 3
+```
